@@ -1,0 +1,78 @@
+﻿@model flatworldvendor.Models.Partner
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Partner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PartnerName" class="control-label"></label>
+                <input asp-for="PartnerName" class="form-control" />
+                <span asp-validation-for="PartnerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegistredDate" class="control-label"></label>
+                <input asp-for="RegistredDate" class="form-control" />
+                <span asp-validation-for="RegistredDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SPOCName" class="control-label"></label>
+                <input asp-for="SPOCName" class="form-control" />
+                <span asp-validation-for="SPOCName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SPOCEmail" class="control-label"></label>
+                <input asp-for="SPOCEmail" class="form-control" />
+                <span asp-validation-for="SPOCEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Skillset" class="control-label"></label>
+                <input asp-for="Skillset" class="form-control" />
+                <span asp-validation-for="Skillset" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemAddress" class="control-label"></label>
+                <input asp-for="TemAddress" class="form-control" />
+                <span asp-validation-for="TemAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BillAddress" class="control-label"></label>
+                <input asp-for="BillAddress" class="form-control" />
+                <span asp-validation-for="BillAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,125 @@
+﻿@model IEnumerable<flatworldvendor.Models.Requistion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PotentialId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complexity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalesPerson)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectManager)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpectedStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenurre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinExprience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxExprience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpenPosition)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PotentialId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complexity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectManager)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenurre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinExprience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxExprience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenPosition)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReqId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReqId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReqId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

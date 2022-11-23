@@ -1,0 +1,89 @@
+﻿@model IEnumerable<flatworldvendor.Models.Partner>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PartnerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SPOCName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SPOCEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Skillset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillAddress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistredDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SPOCName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SPOCEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skillset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillAddress)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PartnersID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PartnersID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PartnersID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
